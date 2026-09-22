@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Anexo técnico HELMO — Registro DNDA</title>
+<style>
+  @page { size: A4; margin: 2.2cm 2cm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #1a1a1a;
+    line-height: 1.55;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-size: 12.5pt;
+  }
+  h1, h2, h3 { font-family: "Segoe UI", Arial, sans-serif; color: #0b3d59; }
+  h1 { font-size: 22pt; margin-bottom: 0.2em; }
+  h2 {
+    font-size: 15pt; margin-top: 2em; border-bottom: 2px solid #0b3d59;
+    padding-bottom: 0.25em; page-break-after: avoid;
+  }
+  h3 { font-size: 12.5pt; margin-top: 1.5em; color: #145374; page-break-after: avoid; }
+  .subtitle { font-family: "Segoe UI", Arial, sans-serif; color: #444; font-size: 12pt; margin-top: 0; }
+  .cover {
+    text-align: center; padding: 3rem 0 2rem; border-bottom: 3px solid #0b3d59; margin-bottom: 2rem;
+  }
+  .cover .tag {
+    font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size: 9.5pt; color: #666; margin-bottom: 0.6em;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 10.5pt; font-family: "Segoe UI", Arial, sans-serif; }
+  th, td { border: 1px solid #c6d3da; padding: 0.5em 0.6em; text-align: left; vertical-align: top; }
+  th { background: #eef4f7; color: #0b3d59; }
+  code, pre { font-family: "Consolas", "Courier New", monospace; }
+  pre {
+    background: #f4f6f4; border: 1px solid #d8dedb; border-left: 4px solid #0b3d59;
+    padding: 0.9em 1em; font-size: 9.3pt; line-height: 1.45; overflow-x: auto;
+    page-break-inside: avoid; white-space: pre-wrap; word-break: break-word;
+  }
+  code.inline {
+    background: #f0f0f0; padding: 0.05em 0.35em; border-radius: 3px; font-size: 0.92em;
+  }
+  .file-ref {
+    font-family: "Segoe UI", Arial, sans-serif; font-size: 10pt; color: #555;
+    background: #f7f7f7; border-left: 3px solid #999; padding: 0.4em 0.7em; margin: 0.8em 0 0.4em;
+  }
+  .note {
+    background: #fff8e6; border: 1px solid #e8d28a; border-radius: 4px;
+    padding: 0.8em 1em; font-size: 10.5pt; font-family: "Segoe UI", Arial, sans-serif; margin: 1em 0;
+  }
+  .section { page-break-before: always; }
+  .section:first-of-type { page-break-before: auto; }
+  footer {
+    margin-top: 3em; padding-top: 1em; border-top: 1px solid #ccc;
+    font-family: "Segoe UI", Arial, sans-serif; font-size: 9pt; color: #777; text-align: center;
+  }
+  ul, ol { margin: 0.6em 0; }
+  @media print {
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="tag">Anexo técnico de soporte documental</div>
+  <h1>HELMO</h1>
+  <p class="subtitle">Sistema de monitoreo inteligente de calidad de agua</p>
+  <p class="subtitle">Soporte para registro de derechos de autor de software ante la DNDA</p>
+  <p class="subtitle">Versión 1.0.0 · 22 de septiembre de 2026</p>
+</div>
+
+<p>Este anexo combina los tres elementos que suele solicitar el trámite de registro de software ante la Dirección Nacional de Derecho de Autor (DNDA): <strong>(1)</strong> una descripción funcional detallada del programa, <strong>(2)</strong> un extracto representativo del código fuente y <strong>(3)</strong> un manual de usuario / guía de instalación. No incluye el repositorio íntegro: el código fuente completo permanece en el repositorio privado de control de versiones, disponible como respaldo si la entidad lo solicita.</p>
+
+<div class="note">
+La información declarada en este documento (nombre, versión, lenguajes) coincide con el contenido real del repositorio en la fecha indicada, conforme al criterio de la DNDA de que "la información que se declara debe poder respaldarse en los archivos que se suben".
+</div>
+
+<div class="section">
+<h2>1. Identificación de la obra</h2>
+<table>
+  <tr><th>Campo</th><th>Valor</th></tr>
+  <tr><td>Nombre de la obra</td><td>HELMO</td></tr>
+  <tr><td>Descripción corta</td><td>Sistema de monitoreo inteligente de calidad de agua</td></tr>
+  <tr><td>Versión declarada</td><td>1.0.0</td></tr>
+  <tr><td>Fecha de la versión</td><td>2026-09-22</td></tr>
+  <tr><td>Tipo de obra</td><td>Software (firmware embebido + backend + integración de red + documentación)</td></tr>
+  <tr><td>Lenguajes de programación</td><td>C++ (Arduino/ESP32), JavaScript (Node.js)</td></tr>
+  <tr><td>Autores</td><td>Esteban Eduardo Escárraga Túquerres, Johan Felipe Ordoñez Jenoy, Dayerli Katerine Tamayo Solarte</td></tr>
+  <tr><td>Titularidad</td><td>Los autores, según <code class="inline">LICENSE</code> y <code class="inline">legal/titularidad.md</code></td></tr>
+  <tr><td>Repositorio de referencia</td><td>Control de versiones Git, historial completo de commits como evidencia de desarrollo incremental</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>2. Descripción funcional detallada</h2>
+
+<h3>2.1 Problema que resuelve</h3>
+<p>HELMO responde a la necesidad de vigilancia continua de variables de calidad y operación del agua (pH, turbidez, nivel) en contextos —como una planta de tratamiento de agua potable (PTAP)— donde el monitoreo manual es lento, discontinuo y costoso. El sistema automatiza la captura periódica de estas variables, reduce la dependencia del muestreo manual, deja trazabilidad histórica de los datos y permite generar alertas tempranas ante condiciones anómalas.</p>
+
+<h3>2.2 Cómo funciona (flujo funcional)</h3>
+<pre>Sensor (pH / turbidez / nivel)
+   -&gt; Nodo de campo (firmware C++, Heltec WiFi LoRa 32 V3)
+   -&gt; Empaquetado en payload binario compacto
+   -&gt; Transmisión LoRaWAN (OTAA, clase A)
+   -&gt; Gateway LoRa -&gt; The Things Stack (TTN)
+   -&gt; Decodificador uplink (JavaScript) reconstruye variables desde bytes
+   -&gt; Backend (Node.js/Express o puente MQTT) recibe la telemetría decodificada
+   -&gt; Persistencia en MongoDB (local y, opcionalmente, Atlas en la nube)
+   -&gt; Visualización en Grafana, expuesto temporalmente vía ngrok para demostración</pre>
+
+<p>Cada nodo energiza su etapa de sensado mediante un MOSFET solo durante la adquisición (para ahorrar energía), toma varias muestras del sensor, las filtra (promedio, mediana u ordenamiento con recorte de extremos según el nodo) y construye un payload binario de 5 o 6 bytes según el tipo de nodo. El payload viaja por LoRaWAN hasta TTN, donde un decodificador uplink en JavaScript lo traduce a variables legibles (<code class="inline">nivel_cm</code>, <code class="inline">turbidez_ntu</code>, <code class="inline">ph</code>, metadatos de radio) antes de que el backend lo almacene y Grafana lo visualice.</p>
+
+<h3>2.3 Módulos principales</h3>
+<table>
+  <tr><th>Módulo</th><th>Ruta</th><th>Lenguaje</th><th>Función</th></tr>
+  <tr><td>Nodo concentrador multisensor</td><td><code class="inline">firmware/nodo_central/src/nodo_concentrador_multisensor.ino</code></td><td>C++</td><td>Mide nivel, turbidez y pH; empaqueta 6 bytes y transmite por LoRaWAN.</td></tr>
+  <tr><td>Nodo dedicado de nivel</td><td><code class="inline">firmware/nodo_nivel/src/nodo_nivel_tanque_ptap.ino</code></td><td>C++</td><td>Mide nivel por ultrasonido y clasifica el estado del tanque.</td></tr>
+  <tr><td>Nodo dedicado de turbidez</td><td><code class="inline">firmware/nodo_turbidez/src/nodo_turbidez_ptap.ino</code></td><td>C++</td><td>Mide turbidez por sensor analógico y clasifica el estado del agua.</td></tr>
+  <tr><td>Nodo dedicado de pH</td><td><code class="inline">firmware/nodo_ph/src/nodo_ph_casa_01.ino</code></td><td>C++</td><td>Mide pH mediante calibración lineal de dos puntos.</td></tr>
+  <tr><td>Decodificador de payload</td><td><code class="inline">integrations/ttn/uplink_decoder.js</code></td><td>JavaScript</td><td>Traduce bytes recibidos por TTN a variables estructuradas.</td></tr>
+  <tr><td>API de consulta</td><td><code class="inline">backend/api/api-mongo.js</code></td><td>JavaScript</td><td>Recibe webhooks de TTN, almacena en MongoDB y expone consulta autenticada.</td></tr>
+  <tr><td>Puente MQTT-MongoDB</td><td><code class="inline">backend/helmo-bridge/index.js</code></td><td>JavaScript</td><td>Se suscribe al broker MQTT de TTN y persiste en MongoDB local/Atlas.</td></tr>
+  <tr><td>Documentación de despliegue</td><td><code class="inline">backend/deploy/</code></td><td>Markdown</td><td>Describe visualización en Grafana y exposición temporal vía ngrok.</td></tr>
+</table>
+
+<h3>2.4 Tecnologías empleadas</h3>
+<ul>
+  <li><strong>Hardware de nodo:</strong> Heltec WiFi LoRa 32 V3 (ESP32-S3), sensores analógicos de pH y turbidez, sensor ultrasónico HC-SR04, MOSFET de control de energía, pantalla OLED.</li>
+  <li><strong>Comunicación:</strong> LoRaWAN (OTAA, clase A), The Things Stack (TTN) mediante MQTT y Custom JavaScript Formatter.</li>
+  <li><strong>Backend:</strong> Node.js, Express, MongoDB (driver oficial), MQTT.js, autenticación HTTP Basic.</li>
+  <li><strong>Persistencia y visualización:</strong> MongoDB local y Atlas, Grafana, ngrok para exposición temporal.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Extracto representativo del código fuente</h2>
+<p>Los siguientes fragmentos son representativos y no corresponden al repositorio completo. Se seleccionaron por ilustrar, respectivamente, la lógica de adquisición embebida, la lógica de decodificación del protocolo y la lógica de persistencia del backend.</p>
+
+<h3>3.1 Firmware embebido — adquisición y transmisión (C++ / Arduino)</h3>
+<div class="file-ref">Archivo de referencia: <code class="inline">firmware/nodo_central/src/nodo_concentrador_multisensor.ino</code></div>
+<pre>/* Preparación de telemetría — payload de 6 bytes:
+ * Byte 0-1 -&gt; nivel x10 en cm (uint16, big-endian)
+ * Byte 2-3 -&gt; turbidez x10 en NTU (uint16, big-endian)
+ * Byte 4-5 -&gt; pH x100 (uint16, big-endian)
+ */
+static void prepareTxFrame(uint8_t port) {
+  (void)port;
+  energizarSensores(true);
+
+  float nivelCm = leerNivel();
+  float turbidezNtu = leerTurbidez();
+  float phValor = leerPH();
+
+  energizarSensores(false);
+
+  uint16_t nivelInt = (uint16_t)(nivelCm * 10.0f);
+  uint16_t turbInt  = (uint16_t)(turbidezNtu * 10.0f);
+  uint16_t phInt    = (uint16_t)(phValor * 100.0f);
+
+  appDataSize = 6;
+  appData[0] = (uint8_t)(nivelInt &gt;&gt; 8);
+  appData[1] = (uint8_t)(nivelInt &amp; 0xFF);
+  appData[2] = (uint8_t)(turbInt &gt;&gt; 8);
+  appData[3] = (uint8_t)(turbInt &amp; 0xFF);
+  appData[4] = (uint8_t)(phInt &gt;&gt; 8);
+  appData[5] = (uint8_t)(phInt &amp; 0xFF);
+
+  mostrarEstadoOLED(nivelCm, turbidezNtu, phValor);
+}
+
+/* Máquina de estados LoRaWAN */
+void loop() {
+  switch (deviceState) {
+    case DEVICE_STATE_INIT:
+      LoRaWAN.init(loraWanClass, loraWanRegion);
+      break;
+    case DEVICE_STATE_JOIN:
+      LoRaWAN.join();
+      break;
+    case DEVICE_STATE_SEND:
+      prepareTxFrame(appPort);
+      LoRaWAN.send();
+      deviceState = DEVICE_STATE_CYCLE;
+      break;
+    case DEVICE_STATE_CYCLE:
+      txDutyCycleTime = appTxDutyCycle + randr(-APP_TX_DUTYCYCLE_RND, APP_TX_DUTYCYCLE_RND);
+      LoRaWAN.cycle(txDutyCycleTime);
+      deviceState = DEVICE_STATE_SLEEP;
+      break;
+    case DEVICE_STATE_SLEEP:
+      LoRaWAN.sleep(loraWanClass);
+      break;
+    default:
+      deviceState = DEVICE_STATE_INIT;
+      break;
+  }
+}</pre>
+
+<h3>3.2 Decodificador de payload LoRaWAN (JavaScript — The Things Stack)</h3>
+<div class="file-ref">Archivo de referencia: <code class="inline">integrations/ttn/uplink_decoder.js</code> (módulo completo, por ser una unidad funcional autocontenida y de tamaño reducido)</div>
+<pre>function decodeUplink(input) {
+  var data = {};
+  var bytes = input.bytes;
+  var longitud = bytes.length;
+  var puerto = input.fPort;
+
+  // Caso 1: Puerto 2, 6 bytes -&gt; nodo monolítico multisensor
+  if (puerto === 2 &amp;&amp; longitud === 6) {
+    var nivelRaw = (bytes[0] &lt;&lt; 8) | bytes[1];
+    var turbidezRaw = (bytes[2] &lt;&lt; 8) | bytes[3];
+    var phRaw = (bytes[4] &lt;&lt; 8) | bytes[5];
+
+    data.tipo_nodo = "monolito";
+    data.familia_nodo = "multisensor";
+    data.nivel_cm = nivelRaw / 10.0;
+    data.turbidez_ntu = turbidezRaw / 10.0;
+    data.ph = phRaw / 100.0;
+  }
+
+  // Caso 2: Puerto 3, 5 bytes -&gt; nodo dedicado de pH
+  else if (puerto === 3 &amp;&amp; longitud === 5) {
+    var nodeId = bytes[0];
+    var phRaw5 = (bytes[1] &lt;&lt; 8) | bytes[2];
+    var voltRaw5 = (bytes[3] &lt;&lt; 8) | bytes[4];
+
+    data.node_id = nodeId;
+    data.tipo_nodo = getPhNodeAlias(nodeId);
+    data.familia_nodo = "ph";
+    data.ph = phRaw5 / 100.0;
+    data.ph_voltage = voltRaw5 / 1000.0;
+  }
+
+  // Caso 3: Puerto 2, 4 bytes -&gt; formato heredado turbidez+pH
+  else if (puerto === 2 &amp;&amp; longitud === 4) {
+    var turbidezRaw4 = (bytes[0] &lt;&lt; 8) | bytes[1];
+    var phRaw4 = (bytes[2] &lt;&lt; 8) | bytes[3];
+
+    data.tipo_nodo = "legacy_tp";
+    data.familia_nodo = "legacy";
+    data.turbidez_ntu = turbidezRaw4 / 10.0;
+    data.ph = phRaw4 / 100.0;
+    data.nivel_cm = 0.0;
+  }
+
+  else {
+    return { errors: ["Payload no reconocido. fPort=" + puerto + ", bytes=" + longitud] };
+  }
+
+  return { data: data, warnings: [], errors: [] };
+}</pre>
+
+<h3>3.3 Backend de ingestión — persistencia en MongoDB (Node.js)</h3>
+<div class="file-ref">Archivo de referencia: <code class="inline">backend/helmo-bridge/index.js</code></div>
+<pre>/* Persistencia dual del documento de telemetría:
+ * 1. Guarda en Mongo local
+ * 2. Intenta replicar en Atlas si está disponible
+ */
+async function guardarDocumento(documento) {
+  let localId = null;
+  let atlasId = null;
+
+  try {
+    const localRes = await localCollection.insertOne(documento);
+    localId = localRes.insertedId;
+  } catch (err) {
+    console.error('Error guardando en Mongo local:', err.message);
+  }
+
+  if (atlasDisponible &amp;&amp; atlasCollection) {
+    try {
+      const atlasRes = await atlasCollection.insertOne(documento);
+      atlasId = atlasRes.insertedId;
+    } catch (err) {
+      atlasDisponible = false;
+      atlasCollection = null;
+      console.error('Error guardando en Atlas. Se desactiva temporalmente:', err.message);
+    }
+  }
+}
+
+/* Procesamiento de cada mensaje MQTT recibido desde TTN */
+client.on('message', async (_topic, message) =&gt; {
+  const ttnJson = JSON.parse(message.toString());
+  const datosSensores = ttnJson.uplink_message?.decoded_payload;
+  if (!datosSensores) return;
+
+  const documento = {
+    dispositivo: ttnJson.end_device_ids?.device_id || 'desconocido',
+    timestamp: ttnJson.received_at ? new Date(ttnJson.received_at) : new Date(),
+    variables: datosSensores,
+    radio_metadata: {
+      fcnt: ttnJson.uplink_message?.f_cnt,
+      rssi: ttnJson.uplink_message?.rx_metadata?.[0]?.rssi,
+      snr: ttnJson.uplink_message?.rx_metadata?.[0]?.snr,
+      gateway: ttnJson.uplink_message?.rx_metadata?.[0]?.gateway_ids?.gateway_id
+    }
+  };
+
+  await guardarDocumento(documento);
+});</pre>
+</div>
+
+<div class="section">
+<h2>4. Manual de usuario y guía de instalación</h2>
+
+<h3>4.1 Requisitos previos</h3>
+<ul>
+  <li>Visual Studio Code (IDE principal) y Git para control de versiones.</li>
+  <li>Arduino IDE con soporte para la placa Heltec WiFi LoRa 32 V3 (librerías <code class="inline">LoRaWan_APP.h</code>, <code class="inline">HT_SSD1306Wire.h</code>).</li>
+  <li>Node.js y npm para los componentes de backend.</li>
+  <li>Cuenta en The Things Stack (TTN) con una aplicación creada.</li>
+  <li>MongoDB local (o instancia de MongoDB Atlas) para persistencia de datos.</li>
+  <li>Grafana para visualización, y ngrok si se requiere exposición pública temporal.</li>
+</ul>
+
+<h3>4.2 Instalación del firmware en un nodo</h3>
+<ol>
+  <li>Abrir el archivo <code class="inline">.ino</code> correspondiente al nodo (<code class="inline">nodo_central</code>, <code class="inline">nodo_nivel</code>, <code class="inline">nodo_turbidez</code> o <code class="inline">nodo_ph</code>) en Arduino IDE.</li>
+  <li>Instalar la placa Heltec WiFi LoRa 32 V3 y las librerías LoRaWAN requeridas.</li>
+  <li>Reemplazar los marcadores nulos de <code class="inline">devEui</code>, <code class="inline">appEui</code> y <code class="inline">appKey</code> por las credenciales OTAA reales generadas en la consola de TTN para ese dispositivo. <strong>Estas credenciales nunca deben subirse al repositorio.</strong></li>
+  <li>Compilar y cargar el firmware en la placa.</li>
+  <li>Verificar por el monitor serial que el nodo se une a la red y transmite periódicamente.</li>
+</ol>
+
+<h3>4.3 Configuración de la integración con TTN</h3>
+<ol>
+  <li>En la consola de TTN, crear el dispositivo final con las credenciales OTAA usadas en el paso anterior.</li>
+  <li>En la aplicación de TTN, configurar un <strong>Custom JavaScript Formatter</strong> como decodificador de uplink, pegando el contenido de <code class="inline">integrations/ttn/uplink_decoder.js</code>.</li>
+  <li>Configurar un webhook o una integración MQTT hacia el backend, según el módulo elegido (<code class="inline">backend/api</code> para webhook HTTP, <code class="inline">backend/helmo-bridge</code> para MQTT).</li>
+</ol>
+
+<h3>4.4 Despliegue del backend</h3>
+<ol>
+  <li>Clonar el repositorio y ubicarse en <code class="inline">backend/api</code> o <code class="inline">backend/helmo-bridge</code> según el mecanismo de ingestión elegido.</li>
+  <li>Ejecutar <code class="inline">npm install</code>.</li>
+  <li>Crear un archivo <code class="inline">.env</code> a partir de la plantilla <code class="inline">env.example</code> del módulo, con las variables de conexión a MongoDB y, si aplica, las credenciales MQTT de TTN. El archivo <code class="inline">.env</code> real nunca se sube al repositorio.</li>
+  <li>Ejecutar el servicio (<code class="inline">node index.js</code> o mediante un gestor de procesos como <code class="inline">pm2</code>).</li>
+  <li>Verificar en consola que el servicio se conecta a MongoDB y, según el módulo, al broker MQTT o queda a la espera de webhooks.</li>
+</ol>
+
+<h3>4.5 Visualización y operación</h3>
+<ol>
+  <li>Configurar Grafana apuntando a la base de datos MongoDB donde el backend persiste las lecturas.</li>
+  <li>Construir o importar el dashboard con paneles de nivel, pH, turbidez, RSSI y SNR.</li>
+  <li>Si se requiere acceso remoto temporal para demostración, exponer el puerto de Grafana con <code class="inline">ngrok http &lt;puerto&gt;</code> y compartir la URL generada.</li>
+  <li>Para operación diaria: verificar periódicamente la conectividad de los nodos, revisar el dashboard y las alertas, y comprobar que el backend permanece activo.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>5. Nota de coherencia documental</h2>
+<p>El nombre (HELMO), la versión (1.0.0) y los lenguajes declarados en la sección 1 coinciden con el contenido efectivamente presente en el repositorio a la fecha de este anexo (ver <code class="inline">CHANGELOG.md</code>, entrada <code class="inline">[1.0.0] - 2026-09-22</code>). Los extractos de código de la sección 3 son transcripciones literales de archivos existentes en el repositorio, referenciados por ruta exacta. El presente documento no reemplaza el código fuente completo ni los demás documentos del repositorio (<code class="inline">README.md</code>, <code class="inline">docs/</code>, <code class="inline">legal/</code>), que permanecen disponibles como respaldo adicional del expediente.</p>
+
+<h3>Autoría</h3>
+<ul>
+  <li>Esteban Eduardo Escárraga Túquerres.</li>
+  <li>Johan Felipe Ordoñez Jenoy.</li>
+  <li>Dayerli Katerine Tamayo Solarte.</li>
+</ul>
+</div>
+
+<footer>HELMO — Anexo técnico para registro DNDA — Versión 1.0.0 — 2026-09-22</footer>
+
+</body>
+</html>
