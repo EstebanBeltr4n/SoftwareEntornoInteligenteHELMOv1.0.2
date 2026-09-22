@@ -1,6 +1,4 @@
-# Descripción corta (campo de plataforma, ≤500 caracteres)
-
-Texto listo para copiar y pegar en el campo de descripción corta del formulario de registro. Longitud verificada por debajo del límite de 500 caracteres.
+# Descripción HELMO
 
 ---
 
@@ -8,4 +6,3 @@ HELMO es un sistema de monitoreo inteligente de calidad de agua. Nodos de campo 
 
 ---
 
-**Longitud:** 453 caracteres (incluyendo espacios), verificada.
