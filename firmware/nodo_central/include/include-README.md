@@ -1,6 +1,6 @@
 # Uso de la carpeta include - Nodo central HELMO
 
-La carpeta `include/` del módulo `firmware/nodo_central` está destinada a archivos de cabecera del proyecto, tales como definiciones de pines, constantes globales, prototipos de funciones y estructuras compartidas entre varios archivos fuente. La documentación de PlatformIO y su estructura de proyecto recomienda precisamente este directorio para los encabezados del proyecto embebido.[web:198][web:200]
+La carpeta `include/` del módulo `firmware/nodo_central` está destinada a archivos de cabecera del proyecto, tales como definiciones de pines, constantes globales, prototipos de funciones y estructuras compartidas entre varios archivos fuente. La documentación de PlatformIO y su estructura de proyecto recomienda precisamente este directorio para los encabezados del proyecto embebido.
 
 Si el firmware del nodo central evoluciona hacia una organización más modular, esta carpeta puede contener archivos como:
 
@@ -10,7 +10,7 @@ Si el firmware del nodo central evoluciona hacia una organización más modular,
 - `lora_payload.h`
 - `system_state.h`
 
-Aunque el archivo principal del nodo central pueda compilar inicialmente como un único `.ino`, documentar el propósito de `include/` resulta útil para la mantenibilidad del proyecto y para dejar constancia de una estructura profesional del firmware dentro del repositorio HELMO.[web:29][web:38]
+Aunque el archivo principal del nodo central pueda compilar inicialmente como un único `.ino`, documentar el propósito de `include/` resulta útil para la mantenibilidad del proyecto y para dejar constancia de una estructura profesional del firmware dentro del repositorio HELMO.
 
 ## Autoría
 
